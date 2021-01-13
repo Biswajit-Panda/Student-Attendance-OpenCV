@@ -11,7 +11,7 @@ def faceExtractor(img):
     if faces is():
         return None
     for (x,y,w,h) in faces:
-        print(x,y,w,h)
+        # print(x,y,w,h)
         croppedFace = img[y:y+h , x:x+w]
     return croppedFace
 
@@ -32,14 +32,14 @@ def collectCapture(Id=1, Name='abc'):
             if not os.path.exists('img_data'):
                 os.makedirs('img_data')
             path = '.\\img_data\\'+ str(Id) + '_' + str(count) +'.jpg'
-            print(path)
+            # print(path)
             cv2.imwrite(path,face)
 
             cv2.putText(face,str(count),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
             cv2.imshow('face',face)
 
         else:
-            print('face not found')
+            # print('face not found')
             pass
 
         if cv2.waitKey(1) == 13 or count == 100 :
@@ -50,7 +50,7 @@ def collectCapture(Id=1, Name='abc'):
     with open('attendance.csv', "a", newline='') as f:
         writer = csv.DictWriter(f,fieldnames=['Regd No','Name'])
         writer.writerow(myDict)
-    print('data saved')
+    # print('data saved')
 
     cap.release()
     cv2.destroyAllWindows()

@@ -62,6 +62,6 @@ def take_attendance():
         df.loc[(df['RegdNo'] == i), today]='P'
 
     df.to_csv('attendance.csv',index=False)
-    print('attendance complete...')
+    # print('attendance complete...')
     
 # take_attendance()

@@ -46,7 +46,7 @@ def predict():
     # prediction = model.predict(final_features)
 
     # output = round(prediction[0],2)
-    print(int_features)
+    # print(int_features)
     dataColection.collectCapture(int(int_features[0]),int_features[1])
 
     return render_template('collect.html', prediction_text='success...')

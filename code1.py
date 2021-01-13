@@ -1,5 +1,5 @@
 import dataColection
 
-print('collected')
+# print('collected')
 
 dataColection.collectCapture()

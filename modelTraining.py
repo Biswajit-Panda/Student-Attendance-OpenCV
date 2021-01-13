@@ -30,7 +30,7 @@ def train_model():
     recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.train(np.asarray(trainingData), np.array(lables))
     recognizer.write('model.xml')
-    print('model trained')
+    # print('model trained')
 
 # train_model()
 
