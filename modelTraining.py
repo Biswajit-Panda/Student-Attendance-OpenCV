@@ -5,7 +5,7 @@ from os.path import isfile, join
 import os
 
 def train_model():
-    dataPath = '.\\img_data\\'
+    dataPath = 'https://github.com/Biswajit-Panda/Student-Attendance-OpenCV/tree/main/img_data'
     images = [f for f in listdir(dataPath) if isfile(join(dataPath, f))]
     # print(images)
 
