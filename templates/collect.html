@@ -19,7 +19,7 @@
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Capture Image</button>
         </form>
-        <form action="/model_training", method="POST">
+        <form action="{{ url_for('model_training')}}", method="POST">
             <button type="submit" class="btn btn-primary btn-block btn-large">Train Model</button>
         </form>
         <br>
