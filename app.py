@@ -1,6 +1,7 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import dataColection
+import modelTraining
 
 # Create the Flask app
 app = Flask(__name__)
@@ -18,9 +19,20 @@ def home():
 def collect():
     return render_template('collect.html')
 
+# Attendance 
+@app.route('/attendance', methods=['POST'])
+def attendance():
+    return render_template('take_attendance.html')
+
+# Attendance Sheet
+@app.route('/attendance_sheet', methods=['POST'])
+def attendance_sheet():
+    return render_template('attendance_sheet.html')
+
 # Train Model
 @app.route('/model_training', methods=['POST'])
 def model_training():
+    modelTraining.train_model()
     return render_template('collect.html', prediction_text='Model Trained...')
 
 # Prediction Function
@@ -38,6 +50,8 @@ def predict():
     dataColection.collectCapture(int(int_features[0]),int_features[1])
 
     return render_template('collect.html', prediction_text='success...')
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
