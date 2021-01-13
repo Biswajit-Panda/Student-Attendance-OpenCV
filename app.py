@@ -2,6 +2,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import dataColection
 import modelTraining
+import testingModel
 
 # Create the Flask app
 app = Flask(__name__)
@@ -22,6 +23,12 @@ def collect():
 # Attendance 
 @app.route('/attendance', methods=['POST'])
 def attendance():
+    return render_template('take_attendance.html')
+
+# Take attendance
+@app.route('/take_attendance', methods=['POST'])
+def take_attendance():
+    testingModel.take_attendance()
     return render_template('take_attendance.html')
 
 # Attendance Sheet
