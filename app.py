@@ -20,7 +20,7 @@ def home():
 def collect():
     return render_template('collect.html')
 
-# Attendance 
+# Attendance
 @app.route('/attendance', methods=['POST'])
 def attendance():
     return render_template('take_attendance.html')
@@ -34,7 +34,7 @@ def take_attendance():
 # Attendance Sheet
 @app.route('/attendance_sheet', methods=['POST'])
 def attendance_sheet():
-    return render_template('attendance_sheet.html')
+    return render_template('attendance_sheet.html', data="data")
 
 # Train Model
 @app.route('/model_training', methods=['POST'])
@@ -43,7 +43,7 @@ def model_training():
     return render_template('collect.html', prediction_text='Model Trained...')
 
 # Prediction Function
-@app.route('/predict',methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     '''
     For rendering results on HTML GUI
@@ -54,10 +54,9 @@ def predict():
 
     # output = round(prediction[0],2)
     # print(int_features)
-    dataColection.collectCapture(int(int_features[0]),int_features[1])
+    dataColection.collectCapture(int(int_features[0]), int_features[1])
 
     return render_template('collect.html', prediction_text='success...')
-
 
 
 if __name__ == "__main__":
