@@ -13,14 +13,16 @@
     <div class="login">
         <h1>Predict Salary Analysis</h1>
 
-        <form action="/collect", method="POST">
+        <form action="{{ url_for('collect')}}", method="POST">
             <button type="submit" class="btn btn-primary btn-block btn-large">Collect Data</button>
         </form>
         
-        <form action="/take_attendance", method="POST">
+        <form action="{{ url_for('attendance')}}", method="POST">
             <button type="submit" class="btn btn-primary btn-block btn-large">Take Attendance</button>
         </form>
-        <form action="/attendance_sheet", method="POST">
+        
+    
+        <form action="{{ url_for('attendance_sheet')}}", method="POST">
             <button type="submit" class="btn btn-primary btn-block btn-large">Display Attendance sheet</button>
         </form>
 
