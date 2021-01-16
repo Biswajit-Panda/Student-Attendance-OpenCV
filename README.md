@@ -44,10 +44,10 @@ For Face recognition, we use the **Local Binary Pattern Histograms(LBPH) Algorit
 # 4.	DFD and ER Diagram
 
 ### Data Flow Diagram
-![DFD]()
+![DFD](Assets/dfd.jpg)
 
 ### ER Diagram
-![ER]()
+![ER](Assets/er.jpg)
 
 # 5.	Coding
 In the backend of our project supervised Machine Learning model is used. The description of the modules are as follows:
@@ -90,13 +90,13 @@ The complete code will be enclosed in a link in conclusion. 
 
 # 6. GUI Design and Execution
 
-![Student Attendance]()
+![Student Attendance](Assets/student_attendance.jpg)
 
-![Collect Data]()
+![Collect Data](Assets/collect_data.jpg)
 
-![Take Attendance]()
+![Take Attendance](Assets/take_attendance.jpg)
 
-![Attendance Sheet]()
+![Attendance Sheet](Assets/attendance_sheet.jpg)
 
 # 7. SWOT Analysis
 
